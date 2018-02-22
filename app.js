@@ -1,11 +1,19 @@
 $(document).ready(function () {
 
-    var search = $("#searchTerm").val().trim();
-    var begin = $("#startYear").val() + '0101';
-    var end = $("#endYear").val() + '1231'
+    // var search = $("#searchTerm").val().trim();
+    // var begin = $("#startYear").val() + '0101';
+    // var end = $("#endYear").val() + '1231'
+
 
     //RETURN ARTICLE FUNCTION
     function returnArticles() {
+
+        var search = $("#searchTerm").val().trim();
+        var begin = $("#startYear").val() + '0101';
+        var end = $("#endYear").val() + '1231'
+        console.log(search);
+        console.log(begin);
+        console.log(end);
 
         var loop = $('#numberRecords').val();
 
