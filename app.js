@@ -34,10 +34,9 @@ $(document).ready(function () {
             if (loop == 0) {
                 loop = 10;
                 //COPY FOR LOOP HERE
-<<<<<<< HEAD
-                for (var i = 0; i < loop; i++) {
-=======
                 for (var i = 0; i < (loop + 1); i++) {
+<<<<<<< HEAD
+=======
 >>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
                     var articleURL = response.response.docs[i].web_url;
                     var resultOrder = response.response.docs[i] + 1;
@@ -53,10 +52,9 @@ $(document).ready(function () {
                 }
                 //FOR LOOP ABOVE
             } else {
-<<<<<<< HEAD
-                for (var i = 0; i < loop; i++) {
-=======
                 for (var i = 0; i < (loop + 1); i++) {
+<<<<<<< HEAD
+=======
 >>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
                     var articleURL = response.response.docs[i].web_url;
                     var resultOrder = response.response.docs[i] + 1;
