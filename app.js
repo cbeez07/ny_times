@@ -29,31 +29,39 @@ $(document).ready(function () {
         $.ajax({
             url: url,
             method: 'GET',
-        }).then(function (result) {
+        }).then(function (response) {
             //DOM Manipulation
             if (loop == 0) {
                 loop = 10;
                 //COPY FOR LOOP HERE
+<<<<<<< HEAD
+                for (var i = 0; i < loop; i++) {
+=======
                 for (var i = 0; i < (loop + 1); i++) {
-                    var articleURL = response.docs[i].web_url;
-                    var resultOrder = response.docs[i] + 1;
-                    var header = response.docs[i].headline.main;
-                    var author = response.docs[i].byline.original;
+>>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
+                    var articleURL = response.response.docs[i].web_url;
+                    var resultOrder = response.response.docs[i] + 1;
+                    var header = response.response.docs[i].headline.main;
+                    var author = response.response.docs[i].byline.original;
 
                     var articleContent = '';
                     articleContent += '<a href="' + articleURL + '"><h3>' + header + '</h3></a>';
                     articleContent += '<p>' + author + '</p>';
                     console.log(articleContent);
                     $('.article-holder').append(articleContent);
-                    
+
                 }
                 //FOR LOOP ABOVE
             } else {
+<<<<<<< HEAD
+                for (var i = 0; i < loop; i++) {
+=======
                 for (var i = 0; i < (loop + 1); i++) {
-                    var articleURL = response.docs[i].web_url;
-                    var resultOrder = response.docs[i] + 1;
-                    var header = response.docs[i].headline.main;
-                    var author = response.docs[i].byline.original;
+>>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
+                    var articleURL = response.response.docs[i].web_url;
+                    var resultOrder = response.response.docs[i] + 1;
+                    var header = response.response.docs[i].headline.main;
+                    var author = response.response.docs[i].byline.original;
 
                     var articleContent = '';
                     articleContent += '<a href="' + articleURL + '"><h3>' + header + '</h3></a>';
@@ -62,9 +70,13 @@ $(document).ready(function () {
                     $('.article-holder').append(articleContent);
                 }
             }
-            console.log(result);
+<<<<<<< HEAD
+            // console.log(result);
         }).fail(function (err) {
             throw err;
+=======
+            console.log(result);
+>>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
         });
 
     }
