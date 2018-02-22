@@ -16,6 +16,7 @@ $(document).ready(function () {
         console.log(end);
 
         var loop = $('#numberRecords').val();
+        console.log(loop);
 
         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
         url += '?' + $.param({
@@ -75,6 +76,7 @@ $(document).ready(function () {
 
     //SERACH BUTTON
     $("#searchBtn").on('click', function () {
+        event.preventDefault();
         //empty function
         emptyArticles();
         //return articles
@@ -83,6 +85,8 @@ $(document).ready(function () {
 
     //CLEAR BUTTON
     $("#clearBtn").on('click', function () {
+        event.preventDefault();
+
         emptyArticles();
     })
 
