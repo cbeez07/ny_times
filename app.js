@@ -20,7 +20,7 @@ $(document).ready(function () {
         $.ajax({
             url: url,
             method: 'GET',
-        }).done(function (result) {
+        }).then(function (result) {
             //DOM Manipulation
             if (loop == 0) {
                 loop = 10;
@@ -34,8 +34,9 @@ $(document).ready(function () {
                     var articleContent = '';
                     articleContent += '<a href="' + articleURL + '"><h3>' + header + '</h3></a>';
                     articleContent += '<p>' + author + '</p>';
-
+                    console.log(articleContent);
                     $('.article-holder').append(articleContent);
+                    
                 }
                 //FOR LOOP ABOVE
             } else {
