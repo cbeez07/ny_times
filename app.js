@@ -29,16 +29,16 @@ $(document).ready(function () {
         $.ajax({
             url: url,
             method: 'GET',
-        }).then(function (result) {
+        }).then(function (response) {
             //DOM Manipulation
             if (loop == 0) {
                 loop = 10;
                 //COPY FOR LOOP HERE
                 for (var i = 0; i < (loop + 1); i++) {
-                    var articleURL = response.docs[i].web_url;
-                    var resultOrder = response.docs[i] + 1;
-                    var header = response.docs[i].headline.main;
-                    var author = response.docs[i].byline.original;
+                    var articleURL = response.response.docs[i].web_url;
+                    var resultOrder = response.response.docs[i] + 1;
+                    var header = response.response.docs[i].headline.main;
+                    var author = response.response.docs[i].byline.original;
 
                     var articleContent = '';
                     articleContent += '<a href="' + articleURL + '"><h3>' + header + '</h3></a>';
@@ -50,10 +50,10 @@ $(document).ready(function () {
                 //FOR LOOP ABOVE
             } else {
                 for (var i = 0; i < (loop + 1); i++) {
-                    var articleURL = response.docs[i].web_url;
-                    var resultOrder = response.docs[i] + 1;
-                    var header = response.docs[i].headline.main;
-                    var author = response.docs[i].byline.original;
+                    var articleURL = response.response.docs[i].web_url;
+                    var resultOrder = response.response.docs[i] + 1;
+                    var header = response.response.docs[i].headline.main;
+                    var author = response.response.docs[i].byline.original;
 
                     var articleContent = '';
                     articleContent += '<a href="' + articleURL + '"><h3>' + header + '</h3></a>';
@@ -63,8 +63,6 @@ $(document).ready(function () {
                 }
             }
             console.log(result);
-        }).fail(function (err) {
-            throw err;
         });
 
     }
