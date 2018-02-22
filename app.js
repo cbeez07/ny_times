@@ -34,10 +34,7 @@ $(document).ready(function () {
             if (loop == 0) {
                 loop = 10;
                 //COPY FOR LOOP HERE
-                for (var i = 0; i < (loop + 1); i++) {
-<<<<<<< HEAD
-=======
->>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
+                for (var i = 0; i < loop; i++) {
                     var articleURL = response.response.docs[i].web_url;
                     var resultOrder = response.response.docs[i] + 1;
                     var header = response.response.docs[i].headline.main;
@@ -52,10 +49,7 @@ $(document).ready(function () {
                 }
                 //FOR LOOP ABOVE
             } else {
-                for (var i = 0; i < (loop + 1); i++) {
-<<<<<<< HEAD
-=======
->>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
+                for (var i = 0; i < loop; i++) {
                     var articleURL = response.response.docs[i].web_url;
                     var resultOrder = response.response.docs[i] + 1;
                     var header = response.response.docs[i].headline.main;
@@ -68,13 +62,10 @@ $(document).ready(function () {
                     $('.article-holder').append(articleContent);
                 }
             }
-<<<<<<< HEAD
             // console.log(result);
         }).fail(function (err) {
             throw err;
-=======
             console.log(result);
->>>>>>> 04e87f0efd153e5e65b5a59a4157e0796363ed47
         });
 
     }
